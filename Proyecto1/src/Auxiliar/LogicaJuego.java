@@ -1,3 +1,10 @@
+/*
+Clase: Principal
+Responsabilidad: Inicia el programa y crea un objeto Vista de GuiMemoria
+Colaboracion: Ninguna
+*/
+
+
 package Auxiliar;
 
 import java.util.Random;
