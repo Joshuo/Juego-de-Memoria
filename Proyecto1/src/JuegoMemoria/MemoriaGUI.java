@@ -39,7 +39,7 @@ public class MemoriaGUI extends JFrame{
 	public MemoriaGUI(){
 		ventanaInicial();
 		setSize(410,300);
-		setTitle("Memory Blocks!");
+		setTitle("Pokemon Puzzle!");
 		setResizable(false);
 		setVisible(true);
 		setLocationRelativeTo(null);	
@@ -72,7 +72,7 @@ public class MemoriaGUI extends JFrame{
 		logo = new JLabel();
 		ImageIcon icon = new ImageIcon(getClass().getResource("/Imagenes/logo.png")); 
 		logo.setIcon(icon);
-		String[] temas = { "Pokemon", "Bleach"};
+		String[] temas = { "Planta", "Fuego"}; //Al agregar mas Strings se aumenta la cantidad de temas.
 		comboBox= new JComboBox<>(temas);
 		comboBox.addActionListener(eventoCombobox);
 		comboBox.setPreferredSize(new Dimension(150,40));
