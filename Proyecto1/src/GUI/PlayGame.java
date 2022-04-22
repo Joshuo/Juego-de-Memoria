@@ -18,7 +18,8 @@ public class PlayGame extends javax.swing.JFrame {
     private boolean caraUp = false;
     private ImageIcon im1;
     private ImageIcon im2;
-    private JButton[] pbtn = new JButton[1];
+    private JButton[] pbtn = new JButton[2];
+    private boolean primerc = false;
     
     public PlayGame() {
         initComponents();
@@ -54,10 +55,24 @@ public class PlayGame extends javax.swing.JFrame {
             im1 = (ImageIcon) btn.getDisabledIcon();
             pbtn[0] = btn;
             caraUp = true;
+            primerc = false;
         }
         else{
             btn.setEnabled(false);
-            caraUp = false; 
+            im2 = (ImageIcon) btn.getDisabledIcon();
+            pbtn[1] = btn;
+            primerc = true; 
+        }
+    }
+    
+    private void compare(){
+        if(caraUp && primerc) {
+            
+            if(im1.getDescription().compareTo(im2.getDescription()) != 0){
+            pbtn[0].setEnabled(true);
+            pbtn[1].setEnabled(true);
+        }
+            caraUp = false;
         }
     }
     
@@ -92,54 +107,139 @@ public class PlayGame extends javax.swing.JFrame {
         btnC1.setBorderPainted(false);
         btnC1.setContentAreaFilled(false);
         btnC1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC1MouseExited(evt);
+            }
+        });
+        btnC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC1ActionPerformed(evt);
+            }
+        });
 
         btnC2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC2.setBorder(null);
         btnC2.setBorderPainted(false);
         btnC2.setContentAreaFilled(false);
         btnC2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC2MouseExited(evt);
+            }
+        });
+        btnC2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC2ActionPerformed(evt);
+            }
+        });
 
         btnC3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC3.setBorder(null);
         btnC3.setBorderPainted(false);
         btnC3.setContentAreaFilled(false);
         btnC3.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC3MouseExited(evt);
+            }
+        });
+        btnC3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC3ActionPerformed(evt);
+            }
+        });
 
         btnC4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC4.setBorder(null);
         btnC4.setBorderPainted(false);
         btnC4.setContentAreaFilled(false);
         btnC4.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC4MouseExited(evt);
+            }
+        });
+        btnC4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC4ActionPerformed(evt);
+            }
+        });
 
         btnC5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC5.setBorder(null);
         btnC5.setBorderPainted(false);
         btnC5.setContentAreaFilled(false);
         btnC5.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC5MouseExited(evt);
+            }
+        });
+        btnC5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC5ActionPerformed(evt);
+            }
+        });
 
         btnC6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC6.setBorder(null);
         btnC6.setBorderPainted(false);
         btnC6.setContentAreaFilled(false);
         btnC6.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC6MouseExited(evt);
+            }
+        });
+        btnC6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC6ActionPerformed(evt);
+            }
+        });
 
         btnC7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC7.setBorder(null);
         btnC7.setBorderPainted(false);
         btnC7.setContentAreaFilled(false);
         btnC7.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC7MouseExited(evt);
+            }
+        });
+        btnC7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC7ActionPerformed(evt);
+            }
+        });
 
         btnC8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC8.setBorder(null);
         btnC8.setBorderPainted(false);
         btnC8.setContentAreaFilled(false);
         btnC8.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC8MouseExited(evt);
+            }
+        });
+        btnC8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC8ActionPerformed(evt);
+            }
+        });
 
         btnC9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC9.setBorder(null);
         btnC9.setBorderPainted(false);
         btnC9.setContentAreaFilled(false);
         btnC9.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC9MouseExited(evt);
+            }
+        });
         btnC9.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnC9ActionPerformed(evt);
@@ -151,24 +251,59 @@ public class PlayGame extends javax.swing.JFrame {
         btnC10.setBorderPainted(false);
         btnC10.setContentAreaFilled(false);
         btnC10.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC10MouseExited(evt);
+            }
+        });
+        btnC10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC10ActionPerformed(evt);
+            }
+        });
 
         btnC11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC11.setBorder(null);
         btnC11.setBorderPainted(false);
         btnC11.setContentAreaFilled(false);
         btnC11.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC11MouseExited(evt);
+            }
+        });
+        btnC11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC11ActionPerformed(evt);
+            }
+        });
 
         btnC12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC12.setBorder(null);
         btnC12.setBorderPainted(false);
         btnC12.setContentAreaFilled(false);
         btnC12.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC12MouseExited(evt);
+            }
+        });
+        btnC12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC12ActionPerformed(evt);
+            }
+        });
 
         btnC13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC13.setBorder(null);
         btnC13.setBorderPainted(false);
         btnC13.setContentAreaFilled(false);
         btnC13.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC13MouseExited(evt);
+            }
+        });
         btnC13.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnC13ActionPerformed(evt);
@@ -180,18 +315,48 @@ public class PlayGame extends javax.swing.JFrame {
         btnC14.setBorderPainted(false);
         btnC14.setContentAreaFilled(false);
         btnC14.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC14MouseExited(evt);
+            }
+        });
+        btnC14.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC14ActionPerformed(evt);
+            }
+        });
 
         btnC15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC15.setBorder(null);
         btnC15.setBorderPainted(false);
         btnC15.setContentAreaFilled(false);
         btnC15.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC15MouseExited(evt);
+            }
+        });
+        btnC15.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC15ActionPerformed(evt);
+            }
+        });
 
         btnC16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/c0.png"))); // NOI18N
         btnC16.setBorder(null);
         btnC16.setBorderPainted(false);
         btnC16.setContentAreaFilled(false);
         btnC16.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/cr.png"))); // NOI18N
+        btnC16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                btnC16MouseExited(evt);
+            }
+        });
+        btnC16.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnC16ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -294,12 +459,132 @@ public class PlayGame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnC9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC9ActionPerformed
-        // TODO add your handling code here:
+        btnEnabled(btnC9);
     }//GEN-LAST:event_btnC9ActionPerformed
 
     private void btnC13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC13ActionPerformed
-        // TODO add your handling code here:
+        btnEnabled(btnC13);
     }//GEN-LAST:event_btnC13ActionPerformed
+
+    private void btnC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC1ActionPerformed
+        btnEnabled(btnC1);
+    }//GEN-LAST:event_btnC1ActionPerformed
+
+    private void btnC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC2ActionPerformed
+        btnEnabled(btnC2);
+    }//GEN-LAST:event_btnC2ActionPerformed
+
+    private void btnC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC3ActionPerformed
+        btnEnabled(btnC3);
+    }//GEN-LAST:event_btnC3ActionPerformed
+
+    private void btnC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC4ActionPerformed
+        btnEnabled(btnC4);
+    }//GEN-LAST:event_btnC4ActionPerformed
+
+    private void btnC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC5ActionPerformed
+        btnEnabled(btnC5);
+    }//GEN-LAST:event_btnC5ActionPerformed
+
+    private void btnC6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC6ActionPerformed
+        btnEnabled(btnC6);
+    }//GEN-LAST:event_btnC6ActionPerformed
+
+    private void btnC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC7ActionPerformed
+        btnEnabled(btnC7);
+    }//GEN-LAST:event_btnC7ActionPerformed
+
+    private void btnC8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC8ActionPerformed
+        btnEnabled(btnC8);
+    }//GEN-LAST:event_btnC8ActionPerformed
+
+    private void btnC10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC10ActionPerformed
+        btnEnabled(btnC10);
+    }//GEN-LAST:event_btnC10ActionPerformed
+
+    private void btnC11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC11ActionPerformed
+        btnEnabled(btnC11);
+    }//GEN-LAST:event_btnC11ActionPerformed
+
+    private void btnC12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC12ActionPerformed
+        btnEnabled(btnC12);
+    }//GEN-LAST:event_btnC12ActionPerformed
+
+    private void btnC14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC14ActionPerformed
+        btnEnabled(btnC14);
+    }//GEN-LAST:event_btnC14ActionPerformed
+
+    private void btnC15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC15ActionPerformed
+        btnEnabled(btnC15);
+    }//GEN-LAST:event_btnC15ActionPerformed
+
+    private void btnC16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC16ActionPerformed
+        btnEnabled(btnC16);
+    }//GEN-LAST:event_btnC16ActionPerformed
+
+    private void btnC1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC1MouseExited
+        compare();
+    }//GEN-LAST:event_btnC1MouseExited
+
+    private void btnC2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC2MouseExited
+        compare();
+    }//GEN-LAST:event_btnC2MouseExited
+
+    private void btnC3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC3MouseExited
+        compare();
+    }//GEN-LAST:event_btnC3MouseExited
+
+    private void btnC4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC4MouseExited
+        compare();
+    }//GEN-LAST:event_btnC4MouseExited
+
+    private void btnC5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC5MouseExited
+        compare();
+    }//GEN-LAST:event_btnC5MouseExited
+
+    private void btnC6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC6MouseExited
+        compare();
+    }//GEN-LAST:event_btnC6MouseExited
+
+    private void btnC7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC7MouseExited
+        compare();
+    }//GEN-LAST:event_btnC7MouseExited
+
+    private void btnC8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC8MouseExited
+        compare();
+    }//GEN-LAST:event_btnC8MouseExited
+
+    private void btnC9MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC9MouseExited
+        compare();
+    }//GEN-LAST:event_btnC9MouseExited
+
+    private void btnC10MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC10MouseExited
+        compare();
+    }//GEN-LAST:event_btnC10MouseExited
+
+    private void btnC11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC11MouseExited
+        compare();
+    }//GEN-LAST:event_btnC11MouseExited
+
+    private void btnC12MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC12MouseExited
+        compare();
+    }//GEN-LAST:event_btnC12MouseExited
+
+    private void btnC13MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC13MouseExited
+        compare();
+    }//GEN-LAST:event_btnC13MouseExited
+
+    private void btnC14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC14MouseExited
+        compare();
+    }//GEN-LAST:event_btnC14MouseExited
+
+    private void btnC15MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC15MouseExited
+        compare();
+    }//GEN-LAST:event_btnC15MouseExited
+
+    private void btnC16MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnC16MouseExited
+        compare();
+    }//GEN-LAST:event_btnC16MouseExited
 
     /**
      * @param args the command line arguments

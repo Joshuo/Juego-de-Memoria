@@ -163,6 +163,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC1MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC1ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC2">
           <Properties>
@@ -178,6 +182,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC2MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC3">
           <Properties>
@@ -193,6 +201,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC3MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC3ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC4">
           <Properties>
@@ -208,6 +220,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC4MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC4ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC5">
           <Properties>
@@ -223,6 +239,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC5MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC5ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC6">
           <Properties>
@@ -238,6 +258,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC6MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC6ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC7">
           <Properties>
@@ -253,6 +277,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC7MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC7ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC8">
           <Properties>
@@ -268,6 +296,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC8MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC8ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC9">
           <Properties>
@@ -284,6 +316,7 @@
             </Property>
           </Properties>
           <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC9MouseExited"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC9ActionPerformed"/>
           </Events>
         </Component>
@@ -301,6 +334,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC10MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC10ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC11">
           <Properties>
@@ -316,6 +353,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC11MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC11ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC12">
           <Properties>
@@ -331,6 +372,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC12MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC12ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC13">
           <Properties>
@@ -347,6 +392,7 @@
             </Property>
           </Properties>
           <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC13MouseExited"/>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC13ActionPerformed"/>
           </Events>
         </Component>
@@ -364,6 +410,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC14MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC14ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC15">
           <Properties>
@@ -379,6 +429,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC15MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC15ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnC16">
           <Properties>
@@ -394,6 +448,10 @@
               <Image iconType="3" name="/Imagenes/cr.png"/>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="btnC16MouseExited"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnC16ActionPerformed"/>
+          </Events>
         </Component>
       </SubComponents>
     </Container>
