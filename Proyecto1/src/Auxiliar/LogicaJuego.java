@@ -1,10 +1,8 @@
 /*
-Clase: Principal
-Responsabilidad: Inicia el programa y crea un objeto Vista de GuiMemoria
+Clase: Auxiliar
+Responsabilidad: Inicia el programa
 Colaboracion: Ninguna
 */
-
-
 package Auxiliar;
 
 import java.util.Random;
