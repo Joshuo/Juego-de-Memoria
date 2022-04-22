@@ -1,17 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package GUI;
 
 import Auxiliar.LogicaJuego;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
+import javax.swing.JOptionPane;
 
-/**
- *
- * @author Xpc
- */
+
 public class PlayGame extends javax.swing.JFrame {
 
     private final LogicaJuego log = new LogicaJuego();
@@ -20,6 +14,7 @@ public class PlayGame extends javax.swing.JFrame {
     private ImageIcon im2;
     private JButton[] pbtn = new JButton[2];
     private boolean primerc = false;
+    private int puntaje = 0;
     
     public PlayGame() {
         initComponents();
@@ -62,6 +57,8 @@ public class PlayGame extends javax.swing.JFrame {
             im2 = (ImageIcon) btn.getDisabledIcon();
             pbtn[1] = btn;
             primerc = true; 
+            puntaje += 20;
+            pregwin();
         }
     }
     
@@ -71,10 +68,46 @@ public class PlayGame extends javax.swing.JFrame {
             if(im1.getDescription().compareTo(im2.getDescription()) != 0){
             pbtn[0].setEnabled(true);
             pbtn[1].setEnabled(true);
+            if(puntaje > 10) puntaje -= 10;
         }
             caraUp = false;
         }
     }
+    
+    private void reiniciar(){
+        btnC1.setEnabled(true);
+        btnC2.setEnabled(true);
+        btnC3.setEnabled(true);
+        btnC4.setEnabled(true);
+        btnC5.setEnabled(true);
+        btnC6.setEnabled(true);
+        btnC7.setEnabled(true);
+        btnC8.setEnabled(true);
+        btnC9.setEnabled(true);
+        btnC10.setEnabled(true);
+        btnC11.setEnabled(true);
+        btnC12.setEnabled(true);
+        btnC13.setEnabled(true);
+        btnC14.setEnabled(true);
+        btnC15.setEnabled(true);
+        btnC16.setEnabled(true);
+        
+        primerc = false;
+        caraUp = false;
+        puntaje = 0;
+    }
+    
+    
+    
+    
+    private void pregwin(){
+        if(!btnC1.isEnabled() && !btnC2.isEnabled() && !btnC3.isEnabled() && !btnC4.isEnabled() && !btnC5.isEnabled() && !btnC6.isEnabled() && !btnC7.isEnabled() && !btnC8.isEnabled()
+                && !btnC9.isEnabled() && !btnC10.isEnabled() && !btnC11.isEnabled() && !btnC12.isEnabled() && !btnC13.isEnabled() && !btnC14.isEnabled() 
+                && !btnC15.isEnabled() && !btnC16.isEnabled()){
+            JOptionPane.showMessageDialog(this, "Felicidades, usted ha ganado. Su puntaje es:" +puntaje, "Win", JOptionPane.INFORMATION_MESSAGE);
+        }
+    }
+    
     
     
     @SuppressWarnings("unchecked")
@@ -98,6 +131,14 @@ public class PlayGame extends javax.swing.JFrame {
         btnC14 = new javax.swing.JButton();
         btnC15 = new javax.swing.JButton();
         btnC16 = new javax.swing.JButton();
+        btnReiniciar = new javax.swing.JButton();
+        Logo = new javax.swing.JLabel();
+        Name1 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextPane1 = new javax.swing.JTextPane();
+        Name2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextPane2 = new javax.swing.JTextPane();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Juego Dos Caras");
@@ -439,23 +480,70 @@ public class PlayGame extends javax.swing.JFrame {
                     .addComponent(btnC13)))
         );
 
+        btnReiniciar.setText("Reiniciar");
+        btnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReiniciarActionPerformed(evt);
+            }
+        });
+
+        Logo.setText("Juego de memoria");
+
+        Name1.setText("Jugador1:");
+
+        jScrollPane2.setViewportView(jTextPane1);
+
+        Name2.setText("Jugador 2:");
+
+        jScrollPane1.setViewportView(jTextPane2);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Name1)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(42, 42, 42)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Name2)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 427, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(Logo)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(6, 6, 6)
+                        .addComponent(btnReiniciar)))
+                .addGap(23, 23, 23))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(110, Short.MAX_VALUE)
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Name1)
+                    .addComponent(Name2)
+                    .addComponent(Logo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnReiniciar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addGap(15, 15, 15))
         );
 
-        setBounds(0, 0, 449, 688);
+        setBounds(0, 0, 455, 670);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnC9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnC9ActionPerformed
@@ -586,6 +674,10 @@ public class PlayGame extends javax.swing.JFrame {
         compare();
     }//GEN-LAST:event_btnC16MouseExited
 
+    private void btnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReiniciarActionPerformed
+        reiniciar();
+    }//GEN-LAST:event_btnReiniciarActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -622,6 +714,9 @@ public class PlayGame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Logo;
+    private javax.swing.JLabel Name1;
+    private javax.swing.JLabel Name2;
     private javax.swing.JButton btnC1;
     private javax.swing.JButton btnC10;
     private javax.swing.JButton btnC11;
@@ -638,6 +733,11 @@ public class PlayGame extends javax.swing.JFrame {
     private javax.swing.JButton btnC7;
     private javax.swing.JButton btnC8;
     private javax.swing.JButton btnC9;
+    private javax.swing.JButton btnReiniciar;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTextPane jTextPane1;
+    private javax.swing.JTextPane jTextPane2;
     // End of variables declaration//GEN-END:variables
 }
